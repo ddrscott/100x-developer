@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <title>100x Developer</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-fork-ribbon-css/0.2.3/gh-fork-ribbon.min.css" />
   <link rel="stylesheet" href="./style.css">
 
   <meta property="og:title" content="100x Developer">
@@ -11,13 +12,37 @@
   <meta property="og:image" content="https://ddrscott.github.io/100x-developer/preview.jpg">
   <meta property="og:url" content="https://ddrscott.github.io/100x-developer/index.html">
   <meta name="twitter:card" content="summary_large_image">
+
+  <script>
+    window.ga = window.ga || function() {
+      (ga.q = ga.q || []).push(arguments)
+    }
+    ga.l = +new Date
+    /* Setup integration and send page view */
+    ga("create", "UA-50126719-1", "auto")
+    ga("set", "anonymizeIp", true)
+    ga("send", "pageview")
+    /* Register handler to log search on blur */
+    document.addEventListener("DOMContentLoaded", () => {
+      if (document.forms.search) {
+        var query = document.forms.search.query
+        query.addEventListener("blur", function() {
+          if (this.value) {
+            var path = document.location.pathname;
+            ga("send", "pageview", path + "?q=" + this.value)
+          }
+        })
+      }
+    })
+  </script>
+  <script async src="https://www.google-analytics.com/analytics.js"></script>
 </head>
 <body>
 <!-- partial:index.partial.html -->
 <script src="https://code.highcharts.com/highcharts.js"></script>
 <script src="https://code.highcharts.com/modules/networkgraph.js"></script>
 
-
+<a class="github-fork-ribbon" href="https://github.com/ddrscott/100x-developer" data-ribbon="Fork me on GitHub" title="Fork me on GitHub">Fork me on GitHub</a>
 <div id="container"></div>
 <!--
 Thanks:
@@ -25,6 +50,5 @@ Thanks:
 - https://codepen.io/mushigh/pen/pXbXBg
 -->
   <script  src="./script.js"></script>
-
 </body>
 </html>
