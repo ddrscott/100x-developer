@@ -1,5 +1,8 @@
+body {
+    padding: 5%;
+}
 #container {
-  min-width: 100vw;
+  min-width: 90vw;
   margin: 0 auto;
-  height: 100vh;
+  height: 90vh;
 }
