@@ -8,15 +8,9 @@ Highcharts.chart('container', {
     type: 'networkgraph',
     marginTop: 120,
   },
-
   title: {
-    text: '100x Developer'
+    text: ''
   },
-
-  subtitle: {
-    text: "The simplest way to become a 10x developer is to unblock 10 other developers.<br/>Teach them what you know.<br/>Motivate them to share with others, too.<br/>Now, you're on the way to becoming a 100x developer and beyond!"
-  },
-
   plotOptions: {
     networkgraph: {
       keys: ['from', 'to'],

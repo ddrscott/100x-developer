@@ -11,6 +11,21 @@ body {
   height: 90vh;
 }
 
+h1 {
+    color: #333;
+    font-size: 2em;
+    margin: 1em auto;
+}
+
+p {
+    margin: 0 auto;
+    font-size: 1.2em;
+    line-height: 1.5em;
+}
+
+footer {
+    margin-top: 2em;
+}
 .github-fork-ribbon:before {
   background-color: #888;
 }
